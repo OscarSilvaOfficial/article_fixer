@@ -1,11 +1,29 @@
+<!-- payments/templates/payments/form_template.html -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Submit Description</title>
 </head>
+
 <body>
-  
+  <h1>Submit Your Description</h1>
+
+  <!-- Formulário para enviar dados -->
+  <form method="post" action="">
+    {% csrf_token %}
+
+    <!-- Caixa de descrição -->
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" rows="4" cols="50"
+      placeholder="Enter your description here..."></textarea><br><br>
+
+    <!-- Botão de envio -->
+    <button type="submit">Submit</button>
+  </form>
+
 </body>
+
 </html>
